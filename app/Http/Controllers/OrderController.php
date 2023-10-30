@@ -23,8 +23,6 @@ class OrderController extends Controller
             'course_id' => $course['id'],
         ]);
 
-        // transaction detail
-
         $transactionDetail = [
             'order_id' => $order->id . '-' . Str::random(5),
             'gross_amount' => $course['price'],
