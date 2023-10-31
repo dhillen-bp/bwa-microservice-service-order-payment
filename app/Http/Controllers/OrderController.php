@@ -94,6 +94,7 @@ class OrderController extends Controller
     {
         Config::$serverKey = env('MIDTRANS_SERVER_KEY');
         Config::$isProduction = (bool) env('MIDTRANS_PRODUCTION');
+        Config::$isSanitized = true; // default
         Config::$is3ds = (bool) env('MIDTRANS_3DS');
 
         $snapUrl = Snap::createTransaction($params)->redirect_url;
